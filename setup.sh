@@ -46,7 +46,7 @@ EOF
 clear
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo -e " Autoscript VPN VIP - Ubuntu 22.04/24.04 & Debian 12"
-echo -e " Repository : fahrialimudin/autoscript-vip"
+echo -e " Repository : stefanizmi/autoscript-vip"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 
 if [ "${EUID}" -ne 0 ]; then
@@ -151,7 +151,7 @@ clear
 # REPO
 # Default repository. Boleh dioverride saat install:
 # REPO="https://raw.githubusercontent.com/USER/REPO/main/" bash setup.sh
-REPO="${REPO:-https://raw.githubusercontent.com/fahrialimudin/autoscript-vip/main/}"
+REPO="${REPO:-https://raw.githubusercontent.com/stefanizmi/autoscript-vip/main/}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 fetch_file() {
@@ -629,7 +629,7 @@ clear
 print_install "Menginstall Dropbear"
 # // Installing Dropbear
 apt-get install "${APT_ARGS[@]}" dropbear > /dev/null 2>&1
-wget -O /etc/issue.net "https://raw.githubusercontent.com/fahrialimudin/autoscript-vip/main/media/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/stefanizmi/autoscript-vip/main/media/issue.net"
 fetch_file "media/dropbear.conf" "/etc/default/dropbear"
 chmod +x /etc/default/dropbear
 /etc/init.d/dropbear restart
