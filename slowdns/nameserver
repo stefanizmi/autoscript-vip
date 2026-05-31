@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-REPOS="https://raw.githubusercontent.com/fahrialimudin/autoscript-vip/main/"
+REPOS="https://raw.githubusercontent.com/stefanizmi/autoscript-vip/main/"
 DOMAIN_PATH=$(cat /etc/xray/domain 2>/dev/null || true)
 if [[ -z "$DOMAIN_PATH" ]]; then
     echo "Domain belum tersedia di /etc/xray/domain"

@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-BASE="${REPO:-https://raw.githubusercontent.com/fahrialimudin/autoscript-vip/main/}"
+BASE="${REPO:-https://raw.githubusercontent.com/stefanizmi/autoscript-vip/main/}"
 clear
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "        UPDATE MENU AUTOSCRIPT"

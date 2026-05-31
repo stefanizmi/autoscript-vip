@@ -6,7 +6,7 @@ OS="$(uname -m)"
 MYIP="$(wget -qO- ipinfo.io/ip 2>/dev/null || curl -fsSL ipinfo.io/ip 2>/dev/null)"
 domain="$(cat /root/domain 2>/dev/null || cat /etc/xray/domain 2>/dev/null || hostname -f)"
 NET="$(ip -4 route ls | awk '/default/ {print $5; exit}')"
-REPO="${REPO:-https://raw.githubusercontent.com/fahrialimudin/autoscript-vip/main/}"
+REPO="${REPO:-https://raw.githubusercontent.com/stefanizmi/autoscript-vip/main/}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 fetch_file() {
