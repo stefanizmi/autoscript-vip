@@ -45,7 +45,7 @@ EOF
 
 clear
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e " Autoscript VPN VIP - Ubuntu 22.04/24.04"
+echo -e " Autoscript VPN VIP - Ubuntu 22.04/24.04 & Debian 12"
 echo -e " Repository : fahrialimudin/autoscript-vip"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 
@@ -61,8 +61,15 @@ else
     exit 1
 fi
 
-if [[ "${ID}" != "ubuntu" || !( "${VERSION_ID}" == "22.04" || "${VERSION_ID}" == "24.04" ) ]]; then
-    echo -e "${ERROR} OS tidak didukung. Script ini disiapkan untuk Ubuntu 22.04 dan Ubuntu 24.04. Terdeteksi: ${PRETTY_NAME:-unknown}"
+OS_SUPPORTED=false
+if [[ "${ID}" == "ubuntu" && ( "${VERSION_ID}" == "22.04" || "${VERSION_ID}" == "24.04" ) ]]; then
+    OS_SUPPORTED=true
+elif [[ "${ID}" == "debian" && ( "${VERSION_ID}" == "12" || "${VERSION_CODENAME}" == "bookworm" ) ]]; then
+    OS_SUPPORTED=true
+fi
+
+if [[ "${OS_SUPPORTED}" != "true" ]]; then
+    echo -e "${ERROR} OS tidak didukung. Script ini disiapkan untuk Ubuntu 22.04, Ubuntu 24.04, dan Debian 12 (Bookworm). Terdeteksi: ${PRETTY_NAME:-unknown}"
     exit 1
 fi
 

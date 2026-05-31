@@ -17,6 +17,7 @@ Mohon baca sampai selesai sebelum melakukan instalasi!
   <br/>
   <img src="https://img.shields.io/badge/Ubuntu-22.04%20LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"/>
   <img src="https://img.shields.io/badge/Ubuntu-24.04%20LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Debian-12%20Bookworm-A81D33?style=for-the-badge&logo=debian&logoColor=white"/>
 </p>
 
 ⚡ **CPU:** Minimal 1 Core  
